@@ -2194,3 +2194,229 @@ img {
     display: flex !important;
   }
 }
+
+/* ==========================================================
+   MOBILE VIEW POLISH & FIXES (OVERLAPS, RUBBER CARDS, HEADER)
+   ========================================================== */
+
+@media (max-width: 768px) {
+  /* 1. Brand Bar & Navbar: No overlap, clean alignment */
+  .brand-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 12px !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .menu-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+    padding: 4px !important;
+  }
+
+  .brand-lockup {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .brand-logo-img {
+    width: 36px !important;
+    height: 36px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .brand-logo-text {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    line-height: 1.1 !important;
+  }
+
+  .brand-logo-text strong {
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .brand-logo-text b {
+    font-size: 0.52rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    color: #c2410c !important;
+  }
+
+  /* Compact Call Direct Button: Icon pill, never overlapping */
+  .call-block {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 10px !important;
+    height: 34px !important;
+    gap: 5px !important;
+    border-radius: 999px !important;
+    flex-shrink: 0 !important;
+    animation: none !important; /* Stop vibration jitter on mobile */
+  }
+
+  .call-block-phone {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .call-block-phone svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .call-block-text small {
+    font-size: 0.65rem !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+  }
+
+  .call-block-text strong {
+    display: none !important;
+  }
+
+  /* Compact Join WhatsApp Button */
+  .book-top {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 10px !important;
+    height: 34px !important;
+    font-size: 0.65rem !important;
+    font-weight: 900 !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+    border-radius: 999px !important;
+  }
+
+  .book-top svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .book-top span {
+    white-space: nowrap !important;
+  }
+
+  /* 2. Fix Card Stretching / Rubber Distortions */
+  .package-card,
+  .spotlight-inner-card,
+  .branch-card,
+  .project-card,
+  .service-framed-card {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  /* Mobile Spotlight Plan Card */
+  .packages-mobile-spotlight {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+
+  .spotlight-inner-card {
+    padding: 16px 14px 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .spotlight-inner-card .package-features {
+    margin: 12px 0 16px !important;
+    gap: 8px !important;
+  }
+
+  .spotlight-inner-card .package-features li {
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .spotlight-inner-card .package-price {
+    font-size: 1.5rem !important;
+  }
+
+  /* Branches Section on Mobile */
+  .branches-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 4px !important;
+  }
+
+  .branch-card {
+    border-radius: 18px !important;
+  }
+
+  .branch-gallery {
+    padding: 14px 16px !important;
+  }
+
+  .branch-gallery-main {
+    max-height: 200px !important;
+    border-radius: 12px !important;
+  }
+
+  .branch-card-body {
+    padding: 14px 16px 18px !important;
+  }
+
+  .branch-map-embed {
+    height: 150px !important;
+  }
+
+  .branch-btn-subgroup {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+}
+
+/* Extra small devices (iPhone SE, etc. < 400px) */
+@media (max-width: 400px) {
+  .brand-bar {
+    padding: 6px 8px !important;
+    gap: 6px !important;
+  }
+
+  .brand-logo-text strong {
+    font-size: 0.74rem !important;
+  }
+
+  .brand-logo-text b {
+    display: none !important;
+  }
+
+  .call-block-text {
+    display: none !important;
+  }
+
+  .call-block {
+    padding: 0 !important;
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 50% !important;
+  }
+
+  .book-top {
+    padding: 6px 8px !important;
+    font-size: 0.6rem !important;
+  }
+
+  .branch-btn-subgroup {
+    grid-template-columns: 1fr !important;
+  }
+}
