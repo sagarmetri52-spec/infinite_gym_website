@@ -28,9 +28,10 @@
   <meta name="twitter:description" content="Top-rated gym in Chikkaballapur & Shidlaghatta. Olympic weights, clean environment & supportive trainers.">
   <meta name="twitter:image" content="assets/logo.webp">
 
-  <!-- Fonts Preconnect -->
+  <!-- Performance & Preload Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/gym-floor.webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Structured Data: LocalBusiness & FAQ -->
@@ -264,7 +265,7 @@
               </a>
               <a href="https://wa.me/918618932114?text=Hello%20Intense%20World%2C%20I%20would%20like%20to%20know%20more%20about%20gym%20membership." target="_blank" rel="noopener noreferrer" class="hero-btn-whatsapp-outline">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                <span>CHAT ON WHATSAPP</span>
+                <span>CHAT WITH COACH ON WHATSAPP</span>
               </a>
             </div>
 
@@ -302,7 +303,7 @@
 
           <!-- Right Image / Carousel Slide -->
           <div class="hero-image-container lightbox-trigger" data-img="assets/gym-floor.webp" data-caption="Intense World Gym Main Resistance Training Floor">
-            <img src="assets/gym-floor.webp" alt="Intense World Gym Main Floor" class="hero-slide-img active" loading="eager">
+            <img src="assets/gym-floor.webp" alt="Intense World Gym Main Floor" class="hero-slide-img active" loading="eager" fetchpriority="high" width="400" height="500">
           </div>
         </div>
       </div>
@@ -323,11 +324,11 @@
           <p class="hero-form-sub">Instant response on WhatsApp • Free coach assessment • No spam</p>
 
           <div class="hero-input-group">
-            <input type="text" id="userNameInput" placeholder="Your Full Name *" required>
+            <input type="text" id="userNameInput" placeholder="Your Full Name *" aria-label="Your Full Name" required>
           </div>
 
           <div class="hero-input-group">
-            <select id="userGoal" required>
+            <select id="userGoal" aria-label="Primary Fitness Goal" required>
               <option value="Strength & Muscle Hypertrophy">Primary Goal: Strength & Muscle Hypertrophy</option>
               <option value="Fat Loss & Lean Conditioning">Primary Goal: Fat Loss & Lean Conditioning</option>
               <option value="General Health & Posture">Primary Goal: General Health & Posture</option>
@@ -337,14 +338,14 @@
           </div>
 
           <div class="hero-input-group">
-            <select id="preferredBranch" required>
+            <select id="preferredBranch" aria-label="Preferred Gym Hub / Branch" required>
               <option value="1st Branch — Chikkaballapur (Main HQ)">Preferred Hub: 1st Branch — Chikkaballapur (Main HQ)</option>
               <option value="2nd Branch — Shidlaghatta (Chintamani Rd)">Preferred Hub: 2nd Branch — Shidlaghatta (Chintamani Rd)</option>
             </select>
           </div>
 
           <div class="hero-input-group">
-            <select id="trainingExperience" required>
+            <select id="trainingExperience" aria-label="Lifting and Training Experience" required>
               <option value="Beginner (New to lifting)">Experience: Beginner (New to lifting)</option>
               <option value="Intermediate (6+ months training)">Experience: Intermediate (6+ months training)</option>
               <option value="Advanced Athlete">Experience: Advanced Athlete</option>
@@ -352,7 +353,7 @@
           </div>
 
           <div class="hero-input-group">
-            <select id="preferredTiming" required>
+            <select id="preferredTiming" aria-label="Preferred Workout Shift / Timing" required>
               <option value="Morning Shift (5:00 AM - 10:00 AM)">Preferred Shift: Morning (5:00 AM - 10:00 AM)</option>
               <option value="Afternoon Shift (12:00 PM - 4:00 PM)">Preferred Shift: Afternoon (12:00 PM - 4:00 PM)</option>
               <option value="Evening Shift (5:00 PM - 10:00 PM)">Preferred Shift: Evening (5:00 PM - 10:00 PM)</option>
@@ -390,7 +391,7 @@
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             </div>
             <div class="hiw-step-number">STEP 1</div>
-            <h4 class="hiw-step-title">Choose Plan & Goal</h4>
+            <h3 class="hiw-step-title">Choose Plan & Goal</h3>
             <p class="hiw-step-desc">Pick your training discipline & duration.</p>
           </div>
           <div class="hiw-arrow">
@@ -405,7 +406,7 @@
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
             <div class="hiw-step-number">STEP 2</div>
-            <h4 class="hiw-step-title">Visit Either Hub</h4>
+            <h3 class="hiw-step-title">Visit Either Hub</h3>
             <p class="hiw-step-desc">Walk into Chikkaballapur or Shidlaghatta.</p>
           </div>
           <div class="hiw-arrow">
@@ -420,7 +421,7 @@
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5h11"></path><path d="M6 20v-2a6 6 0 0 1 12 0v2"></path></svg>
             </div>
             <div class="hiw-step-number">STEP 3</div>
-            <h4 class="hiw-step-title">Floor Coach Guidance</h4>
+            <h3 class="hiw-step-title">Floor Coach Guidance</h3>
             <p class="hiw-step-desc">Get tailored form checks & split routine.</p>
           </div>
           <div class="hiw-arrow">
@@ -435,7 +436,7 @@
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </div>
             <div class="hiw-step-number">STEP 4</div>
-            <h4 class="hiw-step-title">Real Transformation</h4>
+            <h3 class="hiw-step-title">Real Transformation</h3>
             <p class="hiw-step-desc">Consistent strength & physique gains.</p>
           </div>
         </div>
@@ -722,11 +723,11 @@
           </div>
 
           <!-- Plan Switcher Tabs -->
-          <div class="package-plan-switcher" role="tablist">
-            <button type="button" class="package-tab-btn active" id="tabBtnStrength" data-package-tab="strength">
+          <div class="package-plan-switcher" role="tablist" aria-label="Membership Package Categories">
+            <button type="button" class="package-tab-btn active" id="tabBtnStrength" role="tab" aria-selected="true" aria-controls="packageGridStrength" data-package-tab="strength">
               💪 STRENGTH WORKOUT
             </button>
-            <button type="button" class="package-tab-btn" id="tabBtnCardio" data-package-tab="cardio">
+            <button type="button" class="package-tab-btn" id="tabBtnCardio" role="tab" aria-selected="false" aria-controls="packageGridCardio" data-package-tab="cardio">
               ⚡ CARDIO + STRENGTH COMBO
             </button>
           </div>
@@ -1109,7 +1110,7 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 </div>
                 <div class="branch-info-content">
-                  <h5>Location & Address</h5>
+                  <h4 class="branch-detail-heading">Location & Address</h4>
                   <address>Jeevanjaneyaswamy Temple, Kote, Chikkaballapur, Karnataka 562101</address>
                   <p class="plus-code">Google Plus Code: <strong>CPJG+M7, Chikkaballapur</strong></p>
                 </div>
@@ -1120,7 +1121,7 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 </div>
                 <div class="branch-info-content">
-                  <h5>1st Branch Direct Phone</h5>
+                  <h4 class="branch-detail-heading">1st Branch Direct Phone</h4>
                   <p><a href="tel:+918618932114" class="phone-link">+91 86189 32114</a></p>
                 </div>
               </div>
@@ -1130,14 +1131,14 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                 </div>
                 <div class="branch-info-content">
-                  <h5>WhatsApp Support</h5>
+                  <h4 class="branch-detail-heading">WhatsApp Support</h4>
                   <p><a href="https://wa.me/918618932114?text=Hello%20Intense%20World%2C%20I%20would%20like%20to%20know%20more%20about%20the%201st%20Branch." target="_blank" rel="noopener noreferrer" class="phone-link">+91 86189 32114</a></p>
                 </div>
               </div>
 
               <!-- Map Embed -->
               <div class="branch-map-embed">
-                <iframe src="https://maps.google.com/maps?q=13.4317038,77.7256394&t=&z=17&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=13.4317038,77.7256394&t=&z=17&ie=UTF8&iwloc=&output=embed" title="Google Map Location of Intense World Gym Chikkaballapur Branch" allowfullscreen="" loading="lazy"></iframe>
               </div>
 
               <div class="branch-actions-wrap">
@@ -1197,7 +1198,7 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 </div>
                 <div class="branch-info-content">
-                  <h5>Location & Address</h5>
+                  <h4 class="branch-detail-heading">Location & Address</h4>
                   <address>Ward No. 23, Chintamani Main Road, Opp. Kempegowda Statue, Shidlaghatta 562105</address>
                   <p class="plus-code gold">Google Plus Code: <strong>9VRC+6P, Shidlaghatta</strong></p>
                 </div>
@@ -1208,7 +1209,7 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 </div>
                 <div class="branch-info-content">
-                  <h5>2nd Branch Direct Phone</h5>
+                  <h4 class="branch-detail-heading">2nd Branch Direct Phone</h4>
                   <p><a href="tel:+917019474149" class="phone-link">+91 70194 74149</a></p>
                 </div>
               </div>
@@ -1218,14 +1219,14 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                 </div>
                 <div class="branch-info-content">
-                  <h5>WhatsApp Support</h5>
+                  <h4 class="branch-detail-heading">WhatsApp Support</h4>
                   <p><a href="https://wa.me/917019474149?text=Hello%20Intense%20World%2C%20I%20would%20like%20to%20know%20more%20about%20the%202nd%20Branch." target="_blank" rel="noopener noreferrer" class="phone-link">+91 70194 74149</a></p>
                 </div>
               </div>
 
               <!-- Map Embed -->
               <div class="branch-map-embed">
-                <iframe src="https://maps.google.com/maps?q=13.3905763,77.8717771&t=&z=17&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=13.3905763,77.8717771&t=&z=17&ie=UTF8&iwloc=&output=embed" title="Google Map Location of Intense World Gym Shidlaghatta Branch" allowfullscreen="" loading="lazy"></iframe>
               </div>
 
               <div class="branch-actions-wrap">

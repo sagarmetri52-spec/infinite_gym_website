@@ -2420,3 +2420,169 @@ img {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ==========================================================
+   LIGHTHOUSE AUDIT REMEDIATION: ACCESSIBILITY, CONTRAST & TOUCH
+   ========================================================== */
+
+/* 1. Touch Target Optimization: Ensure minimum 44x44px interactive area for dots */
+.spotlight-dots-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-top: 10px !important;
+  padding: 8px 0 !important;
+}
+
+.s-dot {
+  position: relative !important;
+  width: 10px !important;
+  height: 10px !important;
+  padding: 0 !important;
+  border-radius: 999px !important;
+  background: #94a3b8 !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.s-dot.active {
+  width: 26px !important;
+  background: #c2410c !important;
+}
+
+/* Touch target expander (pseudo-element invisible touch zone >= 44x44px) */
+.s-dot::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+/* 2. Enhanced Color Contrast Fixes (WCAG AA Compliant) */
+
+/* Trust Strip ticker background & text */
+.trust-strip {
+  background: #c2410c !important; /* Darker vibrant orange for AA compliance */
+  color: #ffffff !important;
+}
+.trust-item span {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Hero section headline & subtitle contrast */
+.hero-banner-headline .line-orange {
+  color: #c2410c !important;
+}
+
+.hero-btn-orange {
+  background: #c2410c !important;
+  color: #ffffff !important;
+}
+
+.hero-btn-whatsapp-outline {
+  border-color: #047857 !important;
+  color: #065f46 !important;
+  background: #ffffff !important;
+}
+
+.hero-booking-main-subtitle {
+  color: #9a3412 !important;
+  font-weight: 800 !important;
+}
+
+.hero-form-submit {
+  background: #c2410c !important;
+  color: #ffffff !important;
+}
+
+.hero-form-call {
+  border-color: #c2410c !important;
+  color: #9a3412 !important;
+}
+
+/* How It Works step numbering */
+.hiw-step-number {
+  color: #c2410c !important;
+  font-weight: 900 !important;
+}
+
+/* Stats section contrast */
+.stats-bar {
+  background: #c2410c !important;
+}
+.stats-bar .stat-title,
+.stats-bar .counter-num,
+.stats-bar .stat-subtitle {
+  color: #ffffff !important;
+}
+
+/* Facility view all link */
+.view-all-services-link {
+  color: #c2410c !important;
+  font-weight: 800 !important;
+}
+
+/* Section kickers & badges */
+.trending-kicker,
+.why-choose-kicker,
+.projects-kicker {
+  background: #fff7ed !important;
+  color: #9a3412 !important;
+  border-color: #fdba74 !important;
+  font-weight: 900 !important;
+}
+
+/* Package tab button active state */
+.package-tab-btn.active {
+  background: #c2410c !important;
+  color: #ffffff !important;
+}
+
+/* WhatsApp action buttons in branch cards */
+.btn-cult-whatsapp {
+  background: #047857 !important;
+  color: #ffffff !important;
+}
+
+/* Bottom mobile dock text contrast */
+.bottom-nav-item span {
+  color: #334155 !important;
+  font-weight: 800 !important;
+}
+.bottom-nav-item svg {
+  color: #334155 !important;
+}
+.bottom-nav-item:first-child span,
+.bottom-nav-item:first-child svg {
+  color: #c2410c !important;
+}
+.bottom-nav-item.whatsapp-nav-item span,
+.bottom-nav-item.whatsapp-nav-item svg {
+  color: #047857 !important;
+}
+
+/* Footer contrast */
+.footer-layout b[style*="#fb923c"] {
+  color: #ea580c !important;
+}
+.footer-need-help-card a[style*="background: #25d366"],
+.footer-need-help-card a[style*="background: rgb(37, 211, 102)"] {
+  background: #047857 !important;
+  color: #ffffff !important;
+}
+.footer-layout p {
+  color: #cbd5e1 !important;
+}
+
+/* Branch Detail Headings in cards */
+.branch-detail-heading {
+  font-size: 0.85rem !important;
+  font-weight: 900 !important;
+  color: var(--navy) !important;
+  margin: 0 0 2px 0 !important;
+}
